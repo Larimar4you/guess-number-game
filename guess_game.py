@@ -6,11 +6,10 @@ def play_game():
     print("Welcome to a guess number!")
     print("Im thinking of a number between 1 and 100.")
 
-
-    # Компьютер загадывает число
+    # Комп’ютер загадує число.
     secret_number = random.randint(1, 100)
 
-    # Игрок выбирает уровень сложности
+    # Гравець обирає рівень складності.
     while True:
         level = input("Print a difficulty. Type 'easy' or 'hard': ").strip().lower()
         if level == 'easy':
@@ -25,7 +24,7 @@ def play_game():
         else:
             print("Please type 'easy' or 'hard'")
 
-    # Игровой цикл
+    # Ігровий цикл.
 
     while attempts > 0:
         print(f"\nYou have {attempts} attempts_remaining.")
@@ -51,11 +50,11 @@ def play_game():
         else:
             print("Please guess again!")
 
-    #  Спрашиваем, хочет ли игрок сыграть снова
+    #  Питаємо, чи хоче гравець зіграти ще раз.
     play_again = input("\nDo you want to play again? Type 'y' or 'n': ").lower()
     if play_again == 'y':
         print("\n" * 20)
-        play_game()  # 🔁 запускаем заново
+        play_game()  
     else:
         print("Thanks for playing! Goodbye 👋")
 
